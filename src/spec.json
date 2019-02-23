@@ -1,0 +1,55 @@
+﻿{
+    "swagger": "2.0",
+    "info": {
+        "version": "v1",
+        "title":  "title"
+    },
+    "paths": {
+        "/MyPath": {
+            "get": {
+                "operationId": "Response_Get",
+                "consumes": [],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [ ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Response"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Response": {
+            "required": [
+                "Items"
+            ],
+            "type": "object",
+            "properties": {
+                "Items": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Item"
+                    }
+                }
+            }
+        },
+        "Item": {
+            "required": [
+                "Id"
+            ],
+            "type": "object",
+            "properties": {
+                "Id": {
+                    "format": "int32",
+                    "type": "integer"
+                }
+            }
+        }
+    }
+}
