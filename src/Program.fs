@@ -1,10 +1,8 @@
-﻿open SwaggerProvider
-
-type MyTypeProvider = SwaggerProvider<"./spec.json">
+﻿
+open System
 
 [<EntryPoint>]
-let main _ =
-    let provider = MyTypeProvider()
-    let response = provider.ResponseGet()
-    let items = response.Items
+let main argv =
+    printfn "Hello world"
+    // "".   // <-- on ".", no intellisense is given
     0
