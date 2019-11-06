@@ -1,0 +1,5 @@
+source http://nuget.orbis.com/api/v1
+source https://api.nuget.org/v3/index.json
+
+nuget FSharp.Core
+nuget SwaggerProvider 0.10.0-beta10 prerelease
